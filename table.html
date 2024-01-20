@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Performance</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        .main {
+            padding: 5rem 8rem;
+        }
+        .table {
+            border-radius: .5rem;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <button id="download">Download as PDF</button>
+
+    <div class="main">
+        <h1>Table of Summary</h1>
+        <table id="table" class="table table-striped table-bordered table-borderless table-dark">
+            <tr>
+                <th>Algorithm</th>
+                <th>Instance</th>
+                <th>Result</th>
+                <th>Constraint Checks</th>
+                <th>CPU Time (s)</th>
+                <th>Assignments</th>
+            </tr>
+            <tr>
+                <td>FC-MRV</td>
+                <td>2-f24</td>
+                <td>SAT</td>
+                <td>~20K</td>
+                <td>0.18</td>
+                <td>612</td>
+            </tr>
+            <tr>
+                <td>FC-MRV</td>
+                <td>2-f25</td>
+                <td>UNSAT</td>
+                <td>&gt;40,000K (Exceeded)</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>FC-dom/wdeg</td>
+                <td>2-f24</td>
+                <td>SAT</td>
+                <td>~43.5K</td>
+                <td>0.34</td>
+                <td>410</td>
+            </tr>
+            <tr>
+                <td>FC-dom/wdeg</td>
+                <td>2-f25</td>
+                <td>UNSAT</td>
+                <td>&gt;40,000K (Exceeded)</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>MAC-MRV</td>
+                <td>2-f24</td>
+                <td>SAT</td>
+                <td>~25K</td>
+                <td>27.185</td>
+                <td>207,520</td>
+            </tr>
+            <tr>
+                <td>MAC-MRV</td>
+                <td>2-f25</td>
+                <td>UNSAT</td>
+                <td>&gt;1,000K (Exceeded)</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>MAC-dom/wdeg</td>
+                <td>2-f24</td>
+                <td>SAT</td>
+                <td>&gt;100K (&gt;40 mins)</td>
+                <td>0.13</td>
+                <td>401.6</td>
+            </tr>
+            <tr>
+                <td>MAC-dom/wdeg</td>
+                <td>2-f25</td>
+                <td>SAT</td>
+                <td>~22K</td>
+                <td>0.19</td>
+                <td>261</td>
+            </tr>
+            <tr>
+                <td>FC-CBJ-MRV</td>
+                <td>2-f24</td>
+                <td>SAT</td>
+                <td>~35K</td>
+                <td>0.13</td>
+                <td>401.6</td>
+            </tr>
+            <tr>
+                <td>FC-CBJ-MRV</td>
+                <td>2-f25</td>
+                <td>UNSAT</td>
+                <td>Max Steps Exceeded</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>FC-CBJ-dom/wdeg</td>
+                <td>2-f24</td>
+                <td>SAT</td>
+                <td>~22K</td>
+                <td>0.19</td>
+                <td>261</td>
+            </tr>
+            <tr>
+                <td>FC-CBJ-dom/wdeg</td>
+                <td>2-f25</td>
+                <td>UNSAT</td>
+                <td>Max Steps Exceeded</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>MIN-CON</td>
+                <td>2-f24</td>
+                <td>Max Steps Exceeded</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>MIN-CON</td>
+                <td>2-f25</td>
+                <td>Max Steps Exceeded</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+</body>
+</html>

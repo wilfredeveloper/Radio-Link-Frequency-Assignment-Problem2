@@ -1,0 +1,2 @@
+# Add ignore for all files inside the __pycache__ folder
+__pycache__/*
